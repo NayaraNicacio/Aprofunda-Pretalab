@@ -1,0 +1,17 @@
+{
+  "name": "inst-pacotes-aula-13-08",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": " nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "node": "^22.7.0",
+    "nodemon": "^3.1.4"
+  }
+}
