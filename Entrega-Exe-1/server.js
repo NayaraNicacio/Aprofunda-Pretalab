@@ -4,14 +4,19 @@ const router = express.Router()
 const listaLivros = ('./Livros.json')
 
 
-const app = express()
+const app = express();
+app.use(express.json());
 app.use(cors())
 const PORT = 3333
 
 // rota get
-router.get('/Livros', (req, res) =>{
+app.get('/', (req, res) => {
+    res.send('Bem-vindo ao servidor Express!');
+});
+
+const getLivros = router.get('/Livros', (req, res) =>{
     res.json(listaLivros)
 })
 
-app.use(router)
+app.use(getLivros)
 app.listen(console.log("Servidor Rodando na porta ", PORT))
