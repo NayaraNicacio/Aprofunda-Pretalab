@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const {v4: uuidv4} = require('uuid')
-
+const routerDisciplinas = express.Router()
 
 const app=express()
 app.use(express.json())
@@ -66,4 +66,4 @@ routerDisciplinas.patch('/disciplina/:id', (req, res) => {
     
 })
 
-app.listen(PORT,concole.log (`Servidor Rodando na porta ${PORT}`))
+app.listen(PORT, console.log(`Servidor Rodando na porta ${PORT}`))
