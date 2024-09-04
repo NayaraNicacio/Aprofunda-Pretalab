@@ -11,6 +11,10 @@ const PORT = 3340
 
 const list = []
 
+routerDisciplinas.get('/', (req, res) => {
+    console.log("Servidor Rodando com Sucesso!")
+})
+
 routerDisciplinas.get('/disciplinas', (req, res) => {
     res.json(list)
 })
