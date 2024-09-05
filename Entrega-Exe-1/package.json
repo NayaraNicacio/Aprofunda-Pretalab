@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "entrega-exe-1": "file:",
+    "express": "^4.19.2",
+    "express-list-endpoints": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.1.4",
+    "uuid": "^10.0.0"
+  },
+  "name": "entrega-exe-1",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+<<<<<<< HEAD:Entrega-Exe-3/package.json
+    "test": "echo \"Error: no test specified\" && exit 1",
+=======
+>>>>>>> main:Entrega-Exe-1/package.json
+    "start": "nodemon server.js"
+  },
+  "author": "Nayara Nicacio",
+  "license": "ISC",
+<<<<<<< HEAD:Entrega-Exe-3/package.json
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4",
+    "slug": "^9.1.0",
+    "express-list-endpoints": "^7.1.0",
+    "uuid": "^10.0.0"
+  }
+=======
+  "description": ""
+>>>>>>> main:Entrega-Exe-1/package.json
+}
