@@ -5,7 +5,10 @@
 2-  Construimos uma API simples (Requisição Get e Post)
 
 
-![Organizando o código em módulos](https://drive.google.com/file/d/13JNcPB99ydOXWnzruIt6pe3k85LiEK9p/view?usp=sharing)
+![Requisição Get][def]
+
+![Requisição Post][def2]
+
 
 3 - Utilizamos o Framework Express
 
@@ -140,3 +143,7 @@ npm install express-validator @types/express-validator
 - [Iniciando Projeto Typescript com Node.js](https://dev.to/wizdomtek/typescript-express-building-robust-apis-with-nodejs-1fln)
 
 
+
+
+[def]: /workspaces/Aprofunda-Pretalab/Entrega-Exe-1/img/get.png
+[def2]: /workspaces/Aprofunda-Pretalab/Entrega-Exe-1/img/post.png
