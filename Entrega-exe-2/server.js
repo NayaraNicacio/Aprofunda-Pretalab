@@ -1,13 +1,13 @@
 const express = require('express')
 const cors = require('cors')
 const {v4: uuidv4} = require('uuid')
+
 const routerDisciplinas = express.Router()
+const PORT = 3340
 
 const app=express()
 app.use(express.json())
 app.use(cors())
-
-const PORT = 3340
 
 const list = []
 
@@ -25,24 +25,26 @@ routerDisciplinas.post('/disciplinas', (req, res) => {
         titulo: req.body.titulo,
         modulo: req.body.modulo
     }
-   const verificaSeExiste = list.find(item=>item.titulo === req.body.titulo) 
-    if(verificaSeExiste){
+   const verificaSeExiste = list.find(item => item.titulo === req.body.titulo) 
+    
+   if(verificaSeExiste){
         return res.status(403).json({message: `Disciplina ${req.body.titulo} já existe`})
     }
+
     list.push(novaDisciplina)
     res.status(201).json({message: `Disciplina ${req.body.titulo} criada com sucesso!`})
 })
 
 routerDisciplinas.delete('/disciplina/:id', (req, res)=> {
-    const listaAtualizada = list.filter(item => item.id == req.parms.id)
+    const listaAtualizada = list.filter(item => item.id !== req.parms.id)
     res.json(listaAtualizada)
 })
 
 routerDisciplinas.put('/disciplina/:id', (req, res) => {
-    let encontraDisciplina = list.find(item.id === req.parms.id)
+    let encontraDisciplina = list.find(item => item.id === req.parms.id)
 
     if(!encontraDisciplina){
-        res.status(400).json({ message: 'Item não encontrada. '})
+        res.status(404).json({ message: 'Item não encontrada. '})
     }
 
     encontraDisciplina.titulo = req.body.titulo
@@ -70,4 +72,5 @@ routerDisciplinas.patch('/disciplina/:id', (req, res) => {
     
 })
 
+app.use(routerDisciplinas)
 app.listen(PORT, console.log(`Servidor Rodando na porta ${PORT}`))
